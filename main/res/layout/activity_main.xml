@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:keepScreenOn="true"
+    tools:context="com.example.android.counter_strikegoscoretracker.MainActivity">
+
+
+    <TextView
+        android:id="@+id/roundCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:paddingTop="4dp"
+        android:text="@string/round_count"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/roundCount"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="normal"/>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:onClick="resetScore"
+        android:text="Reset"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/team_a_history"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tip"
+        android:orientation="vertical"
+        android:paddingTop="32dp">
+
+        <ImageView
+            android:id="@+id/t_round1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round6"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round7"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round8"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round9"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round10"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round11"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round12"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round13"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round14"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/t_round15"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/team_b_history"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tip"
+        android:orientation="vertical"
+        android:paddingTop="32dp">
+
+        <ImageView
+            android:id="@+id/ct_round1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round6"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round7"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round8"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round9"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round10"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round11"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round12"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round13"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round14"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/ct_round15"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/team_b_history"
+        android:layout_toRightOf="@id/team_a_history"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/t_player"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/player_icon_wh"
+                    android:visibility="gone"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:text="Terrorists"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:paddingBottom="24dp"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="56sp"
+                />
+
+            <Button
+                android:id="@+id/t5k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/t_button"
+                android:onClick="t5k"
+                android:padding="16dp"
+                android:text="5k"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/t_bomb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/t_button"
+                android:onClick="tBomb"
+                android:padding="16dp"
+                android:text="Bomb"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/t_null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="16dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/team_a_bonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="$800"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/team_a_eco_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="16dp"
+                    android:text="2xEco:"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/team_a_2eco_bonus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="8dp"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:text="Counter-Terrorists"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/ct_player"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/player_icon_wh"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:paddingBottom="24dp"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="56sp"/>
+
+            <Button
+                android:id="@+id/ct5k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ct_button"
+                android:onClick="ct5k"
+                android:padding="16dp"
+                android:text="5k"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/ct_defuse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ct_button"
+                android:onClick="ctDefuse"
+                android:padding="16dp"
+                android:text="Defuse"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/ct_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ct_button"
+                android:onClick="ctTime"
+                android:padding="16dp"
+                android:text="Time"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/team_b_bonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:text="$800"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/team_b_eco_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="16dp"
+                    android:text="2xEco:"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/team_b_2eco_bonus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="8dp"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+   <LinearLayout
+        android:id="@+id/pick_side_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Pick your side"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/t_side_pick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/t_button"
+            android:onClick="pickT"
+            android:padding="24dp"
+            android:text="Terrorists"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/ct_side_pick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ct_button"
+            android:onClick="pickCT"
+            android:padding="24dp"
+            android:text="Counter-Terrorists"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="9dp"
+        android:onClick="visitWebGuide"
+        android:src="@drawable/icon_help_wh"/>
+
+</RelativeLayout>
