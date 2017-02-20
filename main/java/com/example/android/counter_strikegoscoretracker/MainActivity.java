@@ -248,11 +248,19 @@ public class MainActivity extends AppCompatActivity {
             srcT = getResources().getIdentifier(source, "id", getPackageName());
         }
 
-        String roundImageResId = "t_round" + (historyRound);
-        int resId = getResources().getIdentifier(roundImageResId, "id", getPackageName());
+        String tRoundImageResId = "t_round" + (historyRound);
+        int resId = getResources().getIdentifier(tRoundImageResId, "id", getPackageName());
 
-        ImageView roundImage = (ImageView) findViewById(resId);
-        roundImage.setImageResource(srcT);
+        ImageView tRoundImage = (ImageView) findViewById(resId);
+        tRoundImage.setVisibility(View.VISIBLE);
+        tRoundImage.setImageResource(srcT);
+
+        String ctRoundImageResId = "ct_round" + (historyRound);
+        resId = getResources().getIdentifier(ctRoundImageResId, "id", getPackageName());
+
+        ImageView ctRoundImage = (ImageView) findViewById(resId);
+        ctRoundImage.setVisibility(View.VISIBLE);
+        ctRoundImage.setImageResource(0);
     }
 
     public void resetRoundHistory() {
@@ -261,11 +269,13 @@ public class MainActivity extends AppCompatActivity {
             String tRoundImageResId = "t_round" + (i);
             int tResId = getResources().getIdentifier(tRoundImageResId, "id", getPackageName());
             ImageView tRoundImage = (ImageView) findViewById(tResId);
+            tRoundImage.setVisibility(View.GONE);
             tRoundImage.setImageResource(0);
 
             String ctRoundImageResId = "ct_round" + (i);
             int ctResId = getResources().getIdentifier(ctRoundImageResId, "id", getPackageName());
             ImageView ctRoundImage = (ImageView) findViewById(ctResId);
+            ctRoundImage.setVisibility(View.GONE);
             ctRoundImage.setImageResource(0);
         }
     }
@@ -291,11 +301,19 @@ public class MainActivity extends AppCompatActivity {
             srcCT = getResources().getIdentifier(source, "id", getPackageName());
         }
 
-        String roundImageResId = "ct_round" + (historyRound);
-        int resId = getResources().getIdentifier(roundImageResId, "id", getPackageName());
+        String crToundImageResId = "ct_round" + (historyRound);
+        int resId = getResources().getIdentifier(crToundImageResId, "id", getPackageName());
 
-        ImageView roundImage = (ImageView) findViewById(resId);
-        roundImage.setImageResource(srcCT);
+        ImageView crToundImage = (ImageView) findViewById(resId);
+        crToundImage.setVisibility(View.VISIBLE);
+        crToundImage.setImageResource(srcCT);
+
+        String tRoundImageResId = "t_round" + (historyRound);
+        resId = getResources().getIdentifier(tRoundImageResId, "id", getPackageName());
+
+        ImageView tRoundImage = (ImageView) findViewById(resId);
+        tRoundImage.setVisibility(View.VISIBLE);
+        tRoundImage.setImageResource(0);
     }
 
     public void displayBonusCT(int defuse) {

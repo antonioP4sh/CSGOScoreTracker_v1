@@ -7,12 +7,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/windowBackground"
+    android:keepScreenOn="true"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:keepScreenOn="true"
     tools:context="com.example.android.counter_strikegoscoretracker.MainActivity">
 
 
@@ -22,23 +22,24 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
-        android:paddingTop="4dp"
+        android:paddingTop="@dimen/low_margin"
         android:text="@string/round_count"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="@dimen/header_text"
         android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/tip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/roundCount"
-        android:layout_marginTop="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/roundCount"
         android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
         android:text=""
         android:textColor="@android:color/white"
-        android:textSize="16sp"
+        android:textSize="@dimen/body_text"
         android:textStyle="normal"/>
 
     <Button
@@ -47,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="@dimen/mid_margin"
         android:onClick="resetScore"
         android:text="Reset"
         android:textColor="@android:color/white"
@@ -55,236 +56,152 @@
 
     <LinearLayout
         android:id="@+id/team_a_history"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/semi_big_margin"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@id/tip"
-        android:orientation="vertical"
-        android:paddingTop="32dp">
+        android:layout_marginTop="@dimen/huge_margin"
+        android:background="@drawable/t_name_bg"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/t_round1"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round2"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round3"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round4"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round5"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round6"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round7"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round8"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round9"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round10"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round11"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round12"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round13"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round14"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/t_round15"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/team_b_history"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/semi_big_margin"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@id/tip"
-        android:orientation="vertical"
-        android:paddingTop="32dp">
+        android:layout_marginTop="@dimen/huge_margin"
+        android:background="@drawable/ct_name_bg"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/ct_round1"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round2"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round3"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round4"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round5"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round6"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round7"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round8"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round9"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round10"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round11"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round12"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round13"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round14"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
         <ImageView
             android:id="@+id/ct_round15"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:padding="2dp"
-            android:scaleType="fitCenter"/>
+            style="@style/RoundHistoryIcon"/>
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -292,91 +209,59 @@
         android:layout_toRightOf="@id/team_a_history"
         android:orientation="horizontal">
 
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="5"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/low_margin"
+                android:layout_marginRight="@dimen/low_margin"
+                android:background="@drawable/t_name_bg"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/t_player"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/player_icon_wh"
-                    android:visibility="gone"/>
-
+                    style="@style/PlayerIcon"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:paddingBottom="16dp"
-                    android:paddingTop="16dp"
-                    android:text="Terrorists"
-                    android:textColor="@android:color/white"
-                    android:textSize="14sp"
-                    />
+                    android:id="@+id/textView"
+                    style="@style/NameView"
+                    android:text="Terrorists"/>
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/team_a_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="sans-serif-light"
-                android:paddingBottom="24dp"
-                android:text="0"
-                android:textColor="@android:color/white"
-                android:textSize="56sp"
-                />
+                style="@style/Score"/>
 
             <Button
                 android:id="@+id/t5k"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                style="@style/TButtons"
+                android:layout_marginBottom="@dimen/mid_margin"
                 android:background="@drawable/t_button"
                 android:onClick="t5k"
-                android:padding="16dp"
-                android:text="5k"
-                android:textAllCaps="true"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"/>
+                android:text="5k"/>
 
             <Button
                 android:id="@+id/t_bomb"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                style="@style/TButtons"
+                android:layout_marginBottom="@dimen/mid_margin"
                 android:background="@drawable/t_button"
                 android:onClick="tBomb"
-                android:padding="16dp"
-                android:text="Bomb"
-                android:textAllCaps="true"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"
-                />
+                android:text="Bomb"/>
 
             <Button
                 android:id="@+id/t_null"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginBottom="@dimen/mid_margin"
+                android:layout_marginLeft="@dimen/semi_big_margin"
+                android:layout_marginRight="@dimen/semi_big_margin"
                 android:padding="16dp"
                 android:visibility="invisible"/>
 
@@ -388,7 +273,7 @@
                 android:fontFamily="sans-serif-light"
                 android:text="$800"
                 android:textColor="@android:color/white"
-                android:textSize="40sp"
+                android:textSize="@dimen/bonus_text"
                 />
 
             <LinearLayout
@@ -405,7 +290,7 @@
                     android:paddingLeft="16dp"
                     android:text="2xEco:"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/body_text"
                     />
 
                 <TextView
@@ -413,10 +298,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:paddingLeft="8dp"
+                    android:paddingLeft="@dimen/mid_margin"
                     android:text=""
                     android:textColor="@android:color/white"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/header_text"
                     />
 
             </LinearLayout>
@@ -424,99 +309,65 @@
         </LinearLayout>
 
         <View
-            android:layout_width="1dp"
+            android:layout_width="@dimen/very_low_margin"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/low_margin"
             android:background="@android:color/white"/>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="5"
             android:orientation="vertical">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/low_margin"
+                android:layout_marginRight="@dimen/low_margin"
+                android:background="@drawable/ct_name_bg"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:paddingBottom="16dp"
-                    android:paddingTop="16dp"
-                    android:text="Counter-Terrorists"
-                    android:textColor="@android:color/white"
-                    android:textSize="14sp"/>
+                    android:id="@+id/ct_name"
+                    style="@style/NameView"
+                    android:text="Counter-Terrorists"/>
 
                 <ImageView
                     android:id="@+id/ct_player"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/player_icon_wh"
-                    android:visibility="gone"/>
+                    style="@style/PlayerIcon"/>
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/team_b_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="sans-serif-light"
-                android:paddingBottom="24dp"
-                android:text="0"
-                android:textColor="@android:color/white"
-                android:textSize="56sp"/>
+                style="@style/Score"/>
 
             <Button
                 android:id="@+id/ct5k"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                style="@style/CTButtons"
+                android:layout_marginBottom="@dimen/mid_margin"
                 android:background="@drawable/ct_button"
                 android:onClick="ct5k"
-                android:padding="16dp"
-                android:text="5k"
-                android:textAllCaps="true"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"/>
+                android:text="5k"/>
 
             <Button
                 android:id="@+id/ct_defuse"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                style="@style/CTButtons"
+                android:layout_marginBottom="@dimen/mid_margin"
                 android:background="@drawable/ct_button"
                 android:onClick="ctDefuse"
-                android:padding="16dp"
-                android:text="Defuse"
-                android:textAllCaps="true"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"/>
+                android:text="Defuse"/>
 
             <Button
                 android:id="@+id/ct_time"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                style="@style/CTButtons"
+                android:layout_marginBottom="@dimen/mid_margin"
                 android:background="@drawable/ct_button"
                 android:onClick="ctTime"
-                android:padding="16dp"
-                android:text="Time"
-                android:textAllCaps="true"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"/>
+                android:text="Time"/>
 
             <TextView
                 android:id="@+id/team_b_bonus"
@@ -526,7 +377,7 @@
                 android:fontFamily="sans-serif-light"
                 android:text="$800"
                 android:textColor="@android:color/white"
-                android:textSize="40sp"/>
+                android:textSize="@dimen/bonus_text"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -542,17 +393,17 @@
                     android:paddingLeft="16dp"
                     android:text="2xEco:"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/body_text"/>
 
                 <TextView
                     android:id="@+id/team_b_2eco_bonus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:paddingLeft="8dp"
+                    android:paddingLeft="@dimen/mid_margin"
                     android:text=""
                     android:textColor="@android:color/white"
-                    android:textSize="20sp"/>
+                    android:textSize="@dimen/header_text"/>
 
             </LinearLayout>
 
@@ -560,7 +411,7 @@
 
     </LinearLayout>
 
-   <LinearLayout
+    <LinearLayout
         android:id="@+id/pick_side_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -573,49 +424,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:layout_marginLeft="@dimen/button_side_margin"
+            android:layout_marginRight="@dimen/button_side_margin"
+            android:background="@drawable/text_view_bg"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:padding="4dp"
+            android:padding="@dimen/low_margin"
             android:text="Pick your side"
             android:textAllCaps="true"
             android:textColor="@android:color/white"
-            android:textSize="30sp"/>
+            android:textSize="@dimen/title_text"/>
 
         <Button
             android:id="@+id/t_side_pick"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/TeamPick"
             android:layout_centerVertical="true"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/button_side_margin"
             android:background="@drawable/t_button"
             android:onClick="pickT"
-            android:padding="24dp"
-            android:text="Terrorists"
-            android:textAllCaps="true"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:text="Terrorists"/>
 
         <Button
             android:id="@+id/ct_side_pick"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            style="@style/TeamPick"
             android:background="@drawable/ct_button"
             android:onClick="pickCT"
-            android:padding="24dp"
-            android:text="Counter-Terrorists"
-            android:textAllCaps="true"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:text="Counter-Terrorists"/>
 
     </LinearLayout>
 
     <ImageView
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/help_margin"
+        android:layout_height="@dimen/help_margin"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="9dp"
