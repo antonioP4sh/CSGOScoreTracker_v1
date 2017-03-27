@@ -5,4 +5,5 @@
     <color name="colorAccent">#FAFAFA</color>
     <color name="windowBackground">#607D8B</color>
     <color name="tColor">#FFEB3B</color>
+    <color name="bombColorOn">#F44336</color>
 </resources>

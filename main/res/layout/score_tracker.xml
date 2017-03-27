@@ -13,7 +13,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.android.counter_strikegoscoretracker.MainActivity">
+    tools:context="com.example.android.counter_strikegoscoretracker.ScoreTracker">
 
 
     <TextView
@@ -32,8 +32,6 @@
         android:id="@+id/tip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/roundCount"
         android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
@@ -41,6 +39,12 @@
         android:textColor="@android:color/white"
         android:textSize="@dimen/body_text"
         android:textStyle="normal"/>
+
+    <View
+        android:id="@+id/center_fake_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
 
     <Button
         android:id="@+id/resetButton"
@@ -51,8 +55,7 @@
         android:layout_marginBottom="@dimen/mid_margin"
         android:onClick="resetScore"
         android:text="Reset"
-        android:textColor="@android:color/white"
-        android:visibility="invisible"/>
+        android:textColor="@android:color/white"/>
 
     <LinearLayout
         android:id="@+id/team_a_history"
@@ -256,6 +259,14 @@
                 android:text="Bomb"/>
 
             <Button
+                android:id="@+id/bomb_trigger"
+                style="@style/Bomb"
+                android:layout_marginBottom="8dp"
+                android:padding="10dp"
+                android:onClick="bombTimer"
+                android:text="Bomb!"/>
+
+            <!--<Button
                 android:id="@+id/t_null"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -263,7 +274,7 @@
                 android:layout_marginLeft="@dimen/semi_big_margin"
                 android:layout_marginRight="@dimen/semi_big_margin"
                 android:padding="16dp"
-                android:visibility="invisible"/>
+                android:visibility="invisible"/>-->
 
             <TextView
                 android:id="@+id/team_a_bonus"
@@ -277,17 +288,19 @@
                 />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/team_a_eco_header"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left|center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
                     android:fontFamily="sans-serif-light"
-                    android:paddingLeft="16dp"
+                    android:paddingLeft="@dimen/high_margin"
                     android:text="2xEco:"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/body_text"
@@ -295,7 +308,41 @@
 
                 <TextView
                     android:id="@+id/team_a_2eco_bonus"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="@dimen/mid_margin"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/header_text"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/team_a_save_header"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="@dimen/very_low_margin"
+                    android:text="Min. Save:"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/body_text"
+                    />
+
+                <TextView
+                    android:id="@+id/team_a_save_amount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:paddingLeft="@dimen/mid_margin"
@@ -380,15 +427,17 @@
                 android:textSize="@dimen/bonus_text"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/team_b_eco_header"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left|center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
                     android:fontFamily="sans-serif-light"
                     android:paddingLeft="16dp"
                     android:text="2xEco:"
@@ -397,7 +446,8 @@
 
                 <TextView
                     android:id="@+id/team_b_2eco_bonus"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:paddingLeft="@dimen/mid_margin"
@@ -407,49 +457,40 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/team_b_save_header"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="@dimen/very_low_margin"
+                    android:text="Min. Save:"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/body_text"
+                    />
+
+                <TextView
+                    android:id="@+id/team_b_save_amount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="@dimen/mid_margin"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/header_text"
+                    />
+
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/pick_side_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/windowBackground"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="visible">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="@dimen/button_side_margin"
-            android:layout_marginRight="@dimen/button_side_margin"
-            android:background="@drawable/text_view_bg"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:padding="@dimen/low_margin"
-            android:text="Pick your side"
-            android:textAllCaps="true"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/title_text"/>
-
-        <Button
-            android:id="@+id/t_side_pick"
-            style="@style/TeamPick"
-            android:layout_centerVertical="true"
-            android:layout_margin="@dimen/button_side_margin"
-            android:background="@drawable/t_button"
-            android:onClick="pickT"
-            android:text="Terrorists"/>
-
-        <Button
-            android:id="@+id/ct_side_pick"
-            style="@style/TeamPick"
-            android:background="@drawable/ct_button"
-            android:onClick="pickCT"
-            android:text="Counter-Terrorists"/>
 
     </LinearLayout>
 
